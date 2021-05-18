@@ -11,7 +11,6 @@ export const AddCategory = ({setcategories}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         if(inputValue.trim()){
             setcategories(cats => [inputValue, ...cats]);
             setinputValue('')
@@ -20,6 +19,7 @@ export const AddCategory = ({setcategories}) => {
 
     return (
         <form onSubmit={handleSubmit}>
+            <p>{ inputValue }</p>
             <input
                 value={inputValue}
                 onChange={ handleInputChange }
